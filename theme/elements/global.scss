@@ -1,0 +1,27 @@
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.centered {
+  width: 100%;
+  max-width: $tablet;
+  padding: 0 $base-rhythm * 3;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 0px) and (max-width: $viewMin) {
+  // In this app, below 200px the app is completely blank.
+  // We can't support micro viewports.
+  * {
+    display: none !important;
+  }
+}

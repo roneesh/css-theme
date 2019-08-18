@@ -1,0 +1,69 @@
+.btn {
+  height: 35px;
+  border: 2px solid $button-color;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  outline: 0;
+  background-color: $button-bg-hover;
+  color: $white;
+}
+.btn:active {
+  background-color: $button-bg-active;
+  color: $white;
+}
+
+.btn--danger {
+  background-color: auto;
+}
+.btn--danger:hover,
+.btn--danger:focus {
+  background-color: auto;
+  color: auto;
+}
+.btn--danger:active {
+  background-color: auto;
+  color: auto;
+}
+
+
+.btn--cancel {
+  background-color: auto;
+}
+.btn--cancel:hover,
+.btn--cancel:focus {
+  background-color: auto;
+  color: auto;
+}
+.btn--cancel:active {
+  background-color: auto;
+  color: auto;
+}
+
+.btn--link {
+  height: auto;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0;
+  transition: border-color 0.1s;
+}
+.btn--link:hover,
+.btn--link:focus,
+.btn--link:active  {
+  border-color: $link-color;
+  background-color: transparent;
+  color: $txt-color;
+}
+
+.btn--link.dark-contrast {
+  color: $link-contrast-color;
+}
+.btn--link.dark-contrast:hover,
+.btn--link.dark-contrast:focus,
+.btn--link.dark-contrast:active {
+  border-color: $link-contrast-color;
+}

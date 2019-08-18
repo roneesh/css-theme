@@ -1,0 +1,60 @@
+@import './variables';
+
+.hdg {
+  margin-bottom: $base-rhythm * 2;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1, .hdg_1 {
+  font-size: 2.5rem;
+  margin-bottom: $base-rhythm * 3;
+}
+
+h2, .hdg_2 {
+  font-size: 2rem;
+  margin-bottom: $base-rhythm * 2;
+}
+
+h3, .hdg_3 {
+  font-size: 1.5rem;
+  margin-bottom: $base-rhythm * 1;
+}
+
+/* TABLET SIZE */
+@media (min-width: $tablet) {
+  .hdg_1 {
+    font-size: 30px;
+    margin-bottom: $base-rhythm * 3;
+  }
+
+  .hdg_2 {
+    font-size: 22px;
+    margin-bottom: $base-rhythm * 2;
+  }
+
+  .hdg_3 {
+    font-size: 20px;
+    margin-bottom: $base-rhythm * 1;
+  }
+}
+
+/* DESKTOP SIZE */
+@media (min-width: $desktop) {
+  .hdg_1 {
+    font-size: 32px;
+    margin-bottom: $base-rhythm * 3;
+  }
+
+  .hdg_2 {
+    font-size: 24px;
+    margin-bottom: $base-rhythm * 2;
+  }
+
+  .hdg_3 {
+    font-size: 22px;
+    margin-bottom: $base-rhythm * 1;
+  }
+}

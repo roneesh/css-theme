@@ -1,0 +1,82 @@
+@import './variables';
+
+:root {
+  font-size: calc(1rem + 0.5vw);
+}
+
+code {
+  font-size: 1rem;
+  display: block;
+  background-color: #ccc;
+  padding: $base-rhythm / 2;
+  border-radius: 1px;
+  font-family: monospace;
+}
+
+p, code {
+  margin-bottom: 0;
+  // margin-bottom: $base-rhythm;
+  // line-height: 1.4rem;
+}
+
+/* MOBILE SIZE */
+
+.txt-small {
+  font-size: 12px;
+}
+
+p,
+.txt {
+  font-size: 14px;
+  font-size: calc(1rem + 0.25vw);
+}
+
+.txt-large {
+  font-size: 16px;
+  font-size: calc(1rem + 1vw);
+}
+
+/* TABLET SIZE */
+@media (min-width: $tablet) {
+  .txt-small {
+    font-size: 14px;
+  }
+
+  p,
+  .txt {
+    font-size: 16px;
+  }
+
+  .txt-large {
+    font-size: 18px;
+  }
+}
+
+/* DESKTOP SIZE */
+@media (min-width: $desktop) {
+  .txt-small {
+    font-size: 16px;
+  }
+
+  p,
+  .txt {
+    font-size: 18px;
+  }
+
+  .txt-large {
+    font-size: 20px;
+  }
+}
+
+/* OTHER TEXT UTILS */
+.txt-centered {
+  text-align: center;
+}
+
+.txt-bold {
+  font-weight: 600;
+}
+
+.txt-italic {
+  font-style: italic;
+}

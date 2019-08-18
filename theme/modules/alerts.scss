@@ -1,0 +1,30 @@
+@import '../elements/variables.scss';
+
+#alerts-container {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  padding: $base-rhythm * 2;
+}
+
+.alert {
+  padding: $base-rhythm;
+  position: relative;
+  margin-bottom: $base-rhythm * 2;
+  border-radius: $base-rhythm / 2;
+  transition: opacity 0.5s;
+}
+
+.alert--fade-out {
+  opacity: 0;
+}
+
+.alert--primary {
+  background-color: $lighter-gray;
+  color: black;
+}
+
+.alert--danger {
+  background-color: $lighter-gray;
+  color: red;
+}

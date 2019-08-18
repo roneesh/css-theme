@@ -1,0 +1,24 @@
+@import './elements/reset';
+@import './elements/variables';
+@import './elements/font-faces';
+
+// alphabetical imports except variables
+// any other organization required for imports would be an anti-pattern
+@import './elements/accessibility';
+@import './elements/buttons';
+@import './elements/global';
+@import './elements/heading';
+@import './elements/layouts';
+@import './elements/links';
+@import './elements/lists';
+@import './elements/spacing';
+@import './elements/tables';
+@import './elements/text';
+@import './elements/z-index';
+
+@import './modules/alerts';
+@import './modules/footer';
+@import './modules/header';
+@import './modules/section';
+@import './modules/site-nav';
+@import './modules/sliders';

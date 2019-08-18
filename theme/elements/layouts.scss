@@ -1,0 +1,8 @@
+.stack {
+  > * + * {
+    margin-top: $base-rhythm;
+  }
+  > * + code {
+    margin-top: $base-rhythm * 2;
+  }
+}

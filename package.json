@@ -1,0 +1,14 @@
+{
+  "name": "A Theme For A Website",
+  "version": "1.0.0",
+  "description": "Basic html elements and CSS to put on websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roneesh Vashisht",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.22.9"
+  }
+}

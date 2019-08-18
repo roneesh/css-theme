@@ -1,0 +1,244 @@
+<html class="smooth-scroll">
+  <head>
+    <title>HTML and CSS Modules</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./theme/index.scss" />
+  </head>
+  <body>
+    <div class="centered">
+      <header>
+        <h1 class="hdg hdg_1">HTML Modules</h1>
+        <!-- <nav>
+          <ul class="h-list h-list--no-padding">
+            <li class="h-list__item">
+              <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+            </li>
+            <li class="h-list__item">
+              <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+            </li>
+            <li class="h-list__item">
+              <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                Back To Top
+              </button>
+            </li>
+          </ul>
+        </nav> -->
+        <nav class="site-nav">
+          <div class="site-nav__toggle">
+            <label class="site-nav__toggle__label" for="site-nav-toggle">&#9776;</label>
+          </div>
+          <input class="site-nav__switch" type="checkbox" id="site-nav-toggle" />
+          <div class="site-nav__menu">
+            <ul class="v-list v-list--no-padding">
+              <li class="v-list__item">
+                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+              </li>
+              <li class="v-list__item">
+                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+              </li>
+              <li class="v-list__item">
+                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                  Back To Top
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <p>This is a list of html modules written with semantic markup, BEM CSS and a sprinkle of JS. Modules build upon and utilize <a href="/index.html">elements</a>.</p>
+      <div class="vr_1"></div>
+      <nav aria-labelledby="page-navigation">
+        <p id="page-navigation">Modules:</p>
+        <ol class="v-list">
+          <li class="v-list__item">
+            <a href="#section">Section</a>
+          </li>
+          <li class="v-list__item">
+            <a href="#header-and-footer">Header and Footer</a>
+          </li>
+          <li class="v-list__item">
+            <a href="#sliders">Sliding Elements</a>
+          </li>
+          <li class="v-list__item">
+            <a href="#alerts">Alerts</a>
+          </li>
+          <li class="v-list__item">
+            <a href="#site-navigation">Site Navigation</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="vr_5"></div>
+      <div id="section" class="section">
+        <h2 class="hdg hdg_2">Sections</h2>
+        <p>You saw these in <a href="./index.html">elements</a>, so there's no need to go into detail. The section is a stylized block level container that we use predominantly in our designs.</p>
+        <div class="section"><p>I am a section, I can hold any html/css content.</p></div>
+        <div class="vr_2"></div>
+        <code>
+          &lt;div class="section"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;...content goes here<br/>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <div class="vr_5"></div>
+      <div id="header-and-footer" class="section">
+        <h2 class="hdg hdg_2">Header and Footer</h2>
+        <p>Most sites have a Header and Footer of some kind, especialy ones that lean more towards web application than website. This themes Header is sticky at the top of the page, and then scrolls down its container. Other parts of the page might use a header, but in those cases they would just use the header tag with no class, and apply any styled child element they desire.</p>
+
+        <div class="vr_2"></div>
+        <code>
+          &lt;header class="page-header"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;... H tag or images go here.<br/>
+          &lt;/header&gt;<br/><br/>
+          &lt;footer class="page-footer"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;... small tag or images go here.<br/>
+          &lt;/footer&gt;
+        </code>
+      </div>
+
+      <div class="vr_5"></div>
+      <div id="sliders" class="section">
+        <h2 class="hdg hdg_2">Sliders</h2>
+        <p>It's a fact of life, people love when elements "woosh" around the page. So a theme that can have elements slide in and out of view would be great. This theme uses a very lightweight implementation, it utilizes a few technologies:</p>
+        <ol class="v-list">
+          <li class="v-list__item">
+            CSS Transforms and Animations
+          </li>
+          <li class="v-list__item">
+            The IntersectionObserver API
+          </li>
+        </ol>
+        <div class="vr_3"></div>
+        <div class="section js-slider slide-left" data-slide-class="slide-in">
+          <p>I'll slide in from the left when I enter the viewport.</p>
+        </div>
+        <div class="vr_3"></div>
+        <code>
+          &lt;div class="section js-slider slide-left" data-slide-class="slide-in"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;p&gt;I slide in from the left&lt;/p&gt;<br/>
+          &lt;/div&gt;
+        </code>
+        <div class="vr_3"></div>
+        <div class="section js-slider slide-right" data-slide-class="slide-in">
+          <p>I'll slide in from the right when I enter the viewport.</p>
+        </div>
+        <div class="vr_3"></div>
+        <code>
+          &lt;div class="section js-slider slide-right" data-slide-class="slide-in"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;p&gt;I slide in from the right&lt;/p&gt;<br/>
+          &lt;/div&gt;
+        </code>
+        <div class="vr_3"></div>
+        <p>Anything can slide into place, not just sections.</p>
+        <ul class="h-list js-slider slide-left" data-slide-class="slide-in">
+          <li class="h-list__item">I'm an h-list item</li>
+        </ul>
+        <button class="btn js-slider slide-right" data-slide-class="slide-in">Subscribe Now!!!</button>
+      </div>
+
+
+      <div class="vr_5"></div>
+      <div id="alerts" class="section">
+        <h2 class="hdg hdg_2">Alerts</h2>
+        <p>Alerts are increasingly a part of web pages now that there are frequent AJAX calls that can fail or produce errors. A robust, global alert notification system is great for letting users know results of their actions, and what potential next steps that might take.</p>
+        <p>Let's try it out, send a sample alert here:</p>
+        <form id="alert-test-form">
+          <input type="text" required="true" name="alertText" placeholder="Alert text here." />
+          <fieldset>
+            <label>
+              Primary alert: <input name="alertType" type="radio" value="primary" checked>
+            </label>
+            <label>
+              Danger alert: <input name="alertType" type="radio" value="danger">
+            </label>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Send Alert</button>
+        </form>
+        <p>The global alerts markup is quite simple:</p>
+        <code>
+          &lt;div id="alerts-container"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;div class="alert alert--primary"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am alert text<br/>
+          &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+          &lt;/div&gt;
+        </code>
+        <p>Likewise, you could render an alert anywhere just by applying a class:</p>
+        <div class="vr_1"></div>
+        <div class="alert alert--primary">
+          I am in inline alert!
+        </div>
+        <code>
+          &lt;div id="alert alert--primary"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;I am an inline alert!<br/>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <div class="vr_5"></div>
+      <div id="site-navigation" class="section">
+        <h2 class="hdg hdg_2">Site Navigation</h2>
+        <p>Most websites have a central navigation element at the top of the page. This site is no different. There are as many styles as snowflakes, but they all should follow a few core principles: </p>
+        <ul class="v-list v-list--no-padding v-list--list-style-square">
+          <li class="v-list__item txt">
+            Have a responsive and desktop treatment
+          </li>
+          <li class="v-list__item txt">
+            Be fully accessible and comprehensible by screen reader users
+          </li>
+          <li class="v-list__item txt">
+            Be easy to access as the user engages with page content, no matter where on the page that is.
+          </li>
+        </ul>
+
+        <nav class="site-nav">
+          <div class="site-nav__toggle">
+            <label class="site-nav__toggle__label" for="site-nav-toggle">&#9776;</label>
+          </div>
+          <input class="site-nav__switch" type="checkbox" id="site-nav-toggle" />
+          <div class="site-nav__menu">
+            <ul class="v-list v-list--no-padding">
+              <li class="v-list__item">
+                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+              </li>
+              <li class="v-list__item">
+                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+              </li>
+              <li class="v-list__item">
+                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                  Back To Top
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <code>
+          &lt;div&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;div&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+      <p class="txt-small">&copy; 2019 - Roneesh Vashisht</p>
+    </footer>
+
+    <script src="./theme/index.js"></script>
+    <script type="text/javascript">
+      const form = document.getElementById('alert-test-form');
+      function onAlertFormSubmit(evt) {
+        evt.preventDefault();
+        const alertsForm = document.getElementById('alert-test-form');
+        const alertText = alertsForm.elements['alertText'].value;
+        const alertType = alertsForm.elements['alertType'].value || 'primary';
+
+        alertsService.sendAlert(alertText, alertType);
+      }
+      form.addEventListener('submit', onAlertFormSubmit);
+    </script>
+  </body>
+</html>

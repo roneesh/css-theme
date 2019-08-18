@@ -1,0 +1,48 @@
+@import '../elements/variables.scss';
+
+.site-nav {
+  position: fixed;
+  top: $base-rhythm * 8;
+  right: $base-rhythm;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.site-nav__toggle {
+  height: 32px;
+  // margin-bottom: $base-rhythm;
+}
+
+.site-nav__toggle__label {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $lighter-gray;
+  color: $white;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-nav__switch {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.site-nav__menu {
+  opacity: 0;
+  background-color: $lighter-gray;
+  color: $white;
+  transition: opacity 0.5s;
+  padding: $base-rhythm * 2;
+  border: 1px solid $black;
+}
+
+.site-nav__switch:checked ~ .site-nav__menu {
+  opacity: 1;
+}

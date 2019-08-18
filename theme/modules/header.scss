@@ -1,0 +1,27 @@
+@import '../elements/variables.scss';
+
+.page-header {
+  height: 60px;
+  // The header inverts our page colors
+  background-color: $txt-color;
+  color: $background-color;
+  margin-bottom: $base-rhythm * 2;
+  padding: $base-rhythm;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hdg, ul {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet) {
+    display: block;
+
+    ul { padding-left: 0; }
+  }
+}

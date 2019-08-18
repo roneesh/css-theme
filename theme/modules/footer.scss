@@ -1,0 +1,26 @@
+@import '../elements/variables.scss';
+
+.page-footer {
+
+  // The footer inverts our page colors
+  background-color: $txt-color;
+  color: $background-color;
+  padding: $base-rhythm;
+
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hdg, ul {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet) {
+    display: block;
+
+    ul { padding-left: 0; }
+  }
+}

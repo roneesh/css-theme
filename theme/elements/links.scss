@@ -1,0 +1,41 @@
+@import './variables';
+
+a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.1s;
+  font-size: 1rem;
+  color: $link-color;
+}
+
+a:hover,
+a:focus,
+a:active {
+  outline: 0;
+  border-color: $link-color;
+}
+
+a:visited {
+  color: $link-color;
+}
+
+a.dark-contrast {
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $link-contrast-color;
+  }
+  &:visited {
+    color: $link-contrast-color;
+  }
+}
+
+/* TABLET SIZE */
+@media (min-width: $tablet) {
+  a { font-size: 16px; }
+}
+
+/* DESKTOP SIZE */
+@media (min-width: $desktop) {
+  a { font-size: 18px; }
+}

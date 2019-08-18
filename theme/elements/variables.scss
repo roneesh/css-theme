@@ -1,0 +1,45 @@
+// COLORS
+
+// option 0.1
+// $background-color: #FBF9F9;
+// $txt-color: #212529;
+// $bg-contrast-1: #ffffff;
+// $border-color: #000000;
+// $cool-blue: #2288ee;
+// $navy-blue: #0066CC;
+// $cool-red: lighten(red, 20%);
+// $dark-red: darkred;
+// $gray: gray;
+
+// option 0.2 - grayscale
+
+// grays
+$white: #ffffff;
+$lighter-gray: #999999;
+$gray: #666666;
+$darker-gray: #333333;
+$black: #855959;
+
+// theme colors:
+$background-color: $white;
+$section-background-color: $white;
+$txt-color: $darker-gray;
+$border-color: $gray;
+$link-color: $black;
+$link-contrast-color: $white;
+
+$button-color: $black;
+$button-bg-hover: $gray;
+$button-bg-active: $darker-gray;
+
+$table-border-color: $gray;
+$table-hover-color: $lighter-gray;
+
+
+// LAYOUT
+$base-rhythm: 10px;
+
+// BREAKPOINTS
+$viewMin: 200px;
+$tablet: 768px;
+$desktop: 1024px;

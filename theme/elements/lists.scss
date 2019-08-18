@@ -1,0 +1,40 @@
+@import './variables';
+
+ul, ol { list-style-position: inside; }
+ol { list-style-type: decimal; }
+
+.v-list, .h-list {
+  // margin-bottom: $base-rhythm;
+  padding-left: $base-rhythm;
+}
+
+.v-list--list-style-square {
+  list-style-type: square;
+}
+
+.v-list--no-padding, .h-list--no-padding {
+  padding-left: 0;
+}
+
+.h-list {
+  display: flex;
+}
+.h-list--wrap {
+  flex-wrap: wrap;
+  .h-list__item {
+    margin-bottom: $base-rhythm;
+  }
+}
+
+.v-list__item {
+  margin-bottom: $base-rhythm;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.h-list__item {
+  margin-right: $base-rhythm;
+  &:last-child {
+    margin-right: 0;
+  }
+}
