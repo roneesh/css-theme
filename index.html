@@ -2,95 +2,86 @@
   <head>
     <title>HTML and CSS Elements</title>
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Source+Sans+Pro:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./theme/index.scss" />
   </head>
   <body>
-    <header class="page-header">
-      <h1 class="hdg hdg_1">HTML Elements</h1>
-      <nav>
-        <ul class="h-list h-list--no-padding">
-          <li class="h-list__item">
-            <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
-          </li>
-          <li class="h-list__item">
-            <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
-          </li>
-          <li class="h-list__item">
-            <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
-              Back To Top
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="centered">
-      <p>This is a list of html elements written with semantic markup and BEM CSS. Elements form the basis of <a href="/modules.html">modules</a>.</p>
+    <div class="centered stack">
+      <header>
+        <h1 class="hdg hdg_1">Elements</h1>
+        <nav class="site-nav">
+          <div class="site-nav__toggle">
+            <label class="site-nav__toggle__label" for="site-nav-toggle">&#9776;</label>
+          </div>
+          <input class="site-nav__switch" type="checkbox" id="site-nav-toggle" />
+          <div class="site-nav__menu">
+            <ul class="v-list v-list--no-padding">
+              <li>
+                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+              </li>
+              <li>
+                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+              </li>
+              <li>
+                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                  Back To Top
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <p>This is a list of html elements written with semantic markup. Elements form the basis of <a href="/modules.html">modules</a>.</p>
       <!-- <div class="vr_1"></div> -->
-      <nav aria-labelledby="page-navigation">
+      <nav aria-labelledby="page-navigation" class="stack-small">
         <p id="page-navigation">Elements:</p>
         <ol class="v-list">
-          <li class="v-list__item">
-            <a href="#spacing">Spacing</a>
-          </li>
-          <li class="v-list__item">
+          <li>
             <a href="#text">Text</a>
           </li>
-          <li class="v-list__item">
+          <li>
             <a href="#links">Links</a>
           </li>
-          <li class="v-list__item">
+          <li>
             <a href="#lists">Lists</a>
           </li>
-          <li class="v-list__item">
+          <li>
             <a href="#lists-blocks">Lists Of Block Elements</a>
           </li>
-          <li class="v-list__item">
+          <li>
             <a href="#buttons">Buttons</a>
           </li>
-          <li class="v-list__item">
+          <li>
             <a href="#tables">Tables</a>
+          </li>
+          <li>
+            <a href="#forms">Forms</a>
+          </li>
+          <li>
+            <a href="#form-validations">Form Validations</a>
           </li>
         </ol>
       </nav>
-
-      <div class="vr_5"></div>
-
-      <div id="spacing" class="section stack">
-        <h2 class="hdg hdg_2">Spacing</h2>
-        <p>These styles use a base rhythm of 10px. Various parts of the app will use an empty div with a .vr_* class applied, like so: </p>
-        <code>
-          &lt;div class="vr_1"&gt;&lt;/div&gt;
-          &lt;-- 10px of spacing below --&gt;
-          <div class="vr_1"></div>
-
-          &lt;div class="vr_2"&gt;&lt;/div&gt;
-          &lt;-- 20px of spacing below --&gt;
-          <div class="vr_2"></div>
-
-          &lt;div class="vr_3"&gt;&lt;/div&gt;
-          &lt;-- 30px of spacing below --&gt;
-          <div class="vr_3"></div>
-
-          &lt;div class="vr_4"&gt;&lt;/div&gt;
-          &lt;-- 40px of spacing below --&gt;<div class="vr_4"></div>
-          ...up to 9 vr's.
-        </code>
-        <p>In some cases, elements or modules will include the base rhythm in their styling, but as a general rule elements and modules should avoid setting their own spacing in the app to avoid CSS side effects.</p>
-      </div>
-
-      <div class="vr_5"></div>
 
       <div id="text" class="section stack">
         <h2 class="hdg hdg_2">Text</h2>
         <p>All apps use text, these are p tags and span tags. Your app should consistently define sizes for various levels of text.</p>
 
         <h3 class="hdg hdg_3">Standard Text: </h3>
-        <p>Lorem ipsum dolor sit amet</p>
-        <code>Code: &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
+        <p>Standard text,</p>
+        <span class="txt">also Standard</span>
+        <code>
+          &lt;p&gt;Standard text,&lt;/p&gt;<br/>
+          &lt;span class="txt"&gt;also Standard&lt;/span&gt;
+        </code>
 
         <h3 class="hdg hdg_3">Small Text: </h3>
-        <p class="txt-small">Lorem ipsum dolor sit amet</p>
-        <code>&lt;p class="txt-small"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
+        <p class="txt-small">Small,</p>
+        <small>Also small</small>
+        <code>
+          &lt;p class="txt-small"&gt;Small,&lt;/p&gt;<br/>
+          &lt;small&gt;Also Small&lt;/small&gt;
+        </code>
 
         <h3 class="hdg hdg_3">Large Text: </h3>
         <p class="txt-large">Lorem ipsum dolor sit amet</p>
@@ -100,29 +91,35 @@
         <p class="txt-centered">Lorem ipsum dolor sit amet</p>
         <code>&lt;p class="txt-centered"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
 
-        <h3 class="hdg hdg_3">Bold and Italic Text: </h3>
+        <h3 class="hdg hdg_3">Italic Text: </h3>
         <p class="txt-centered">
-          <span class="txt-bold">Bold</span>, <span class="txt-italic">Italic</span>
+          <span class="txt-italic">Italic</span>, <em>Also Italic</em>
         </p>
-        <code>&lt;p class="txt-centered"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
-      </div>
+        <code>
+          &lt;span class="txt-italic"&gt;Italic&lt;/span&gt;,<br/>
+          &lt;em&gt;Also Italic&lt;/em&gt;
+        </code>
 
-      <div class="vr_5"></div>
+        <h3 class="hdg hdg_3">Bold Text: </h3>
+        <p class="txt-centered">
+          <span class="txt-bold">Bold</span>, <strong>Also Bold</strong>
+        </p>
+        <code>
+          &lt;span class="txt-bold"&gt;Italic&lt;/span&gt;,<br/>
+          &lt;strong&gt;Also Bold&lt;/strong&gt;
+        </code>
+      </div>
 
       <div id="links" class="section stack">
         <h2 class="hdg hdg_2">Links</h2>
-        <p>All apps use links, these are a tags. Your app should not only define styles for links, but also for the three pseudo classes of links: :hover, :focus, :active</p>
+        <p>All apps use links, these are a tags. Your app should not only define styles for links, but also for the three pseudo classes of links: :hover, :focus, :active. Hover over <a href="#">this link</a> to see how it's styling changes: </p>
 
-        <h3 class="hdg hdg_3">Standard link:</h3>
-        <a href="#">Back to top link!</a>
         <!-- <div class="vr_1"></div> -->
         <code>&lt;a href="#"&gt;Lorem ipsum dolor sit amet&lt;/a&gt;</code>
 
-        <h3 class="hdg hdg_3">Link in focus, hover or active (all same styling):</h3>
+        <p>Here's a link with the hover stlying pre-applied so you can see it:</p>
         <a href="#" style="border-color:#000000;">Back to top link!</a>
       </div>
-
-      <div class="vr_5"></div>
 
       <div id="lists" class="section stack">
         <h2 class="hdg hdg_2">Lists</h2>
@@ -130,55 +127,53 @@
 
         <h3 class="hdg hdg_3">Vertical List: </h3>
         <ul class="v-list">
-          <li class="v-list__item">Foo</li>
-          <li class="v-list__item">Bar</li>
-          <li class="v-list__item">Buz</li>
+          <li>Foo</li>
+          <li>Bar</li>
+          <li>Buz</li>
         </ul>
         <code>
           &lt;ul class="v-list"&gt;<br/>&#9;
-            &nbsp;&nbsp;&nbsp;&lt;li class="v-list__item"&gt;Foo&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="v-list__item"&gt;Bar&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="v-list__item"&gt;Buz&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Foo&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Bar&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Buz&lt;/li&gt;<br/>
           &lt;/ul&gt;<br/>
         </code>
 
         <h3 class="hdg hdg_3">Horizontal List: </h3>
         <ul class="h-list">
-          <li class="h-list__item">Foo</li>
-          <li class="h-list__item">Bar</li>
-          <li class="h-list__item">Buz</li>
+          <li>Foo</li>
+          <li>Bar</li>
+          <li>Buz</li>
         </ul>
         <code>
           &lt;ul class="h-list"&gt;<br/>&#9;
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Foo&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Bar&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Buz&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Foo&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Bar&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Buz&lt;/li&gt;<br/>
           &lt;/ul&gt;<br/>
         </code>
         <p>Note that horizontal lists have no list style type.</p>
 
         <h3 class="hdg hdg_3">Ordered Lists: </h3>
         <ol class="h-list">
-          <li class="h-list__item">Foo</li>
-          <li class="h-list__item">Bar</li>
-          <li class="h-list__item">Buz</li>
+          <li>Foo</li>
+          <li>Bar</li>
+          <li>Buz</li>
         </ol>
         <ol class="v-list">
-            <li class="v-list__item">Foo</li>
-            <li class="v-list__item">Bar</li>
-            <li class="v-list__item">Buz</li>
+            <li>Foo</li>
+            <li>Bar</li>
+            <li>Buz</li>
           </ol>
         <code>
           &lt;ol class="h-list"&gt;<br/>&#9;
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Foo&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Bar&lt;/li&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&lt;li class="h-list__item"&gt;Buz&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Foo&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Bar&lt;/li&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;Buz&lt;/li&gt;<br/>
           &lt;/ol&gt;<br/>
         </code>
         <p>Ordered lists will have their number in the list in both horizontal and veritcal configurations.</p>
       </div>
-
-      <div class="vr_5"></div>
 
       <div id="lists-blocks" class="section stack">
         <h2 class="hdg hdg_2">Lists Of Block Level Items</h2>
@@ -186,31 +181,31 @@
         <p>Let's put some of these sections themselves in our lists.</p>
         <h3 class="hdg hdg_3">Vertical List: </h3>
         <ul class="v-list">
-          <li class="v-list__item vr_2">
+          <li>
             <div class="section section--cool-blue"><p>This is section #1 in the list.</p></div>
           </li>
-          <li class="v-list__item vr_2">
+          <li>
             <div class="section section--dark-red"><p>This is section #2 in the list.</p></div>
           </li>
-          <li class="v-list__item vr_2">
+          <li>
             <div class="section section--cool-blue"><p>This is section #3 in the list.</p></div>
           </li>
         </ul>
         <code>
-          &lt;li class="v-list__item"&gt;<br/>
+          &lt;li&gt;<br/>
           &nbsp;&nbsp;&nbsp;&lt;div class="section stack"&gt;...&lt;/div&gt;<br/>
           &lt;/li&gt;
         </code>
 
         <h3 class="hdg hdg_3">Horizontal List: </h3>
         <ul class="h-list">
-          <li class="h-list__item">
+          <li>
             <div class="section section--dark-red"><p>This is item #1 in the list.</p></div>
           </li>
-          <li class="h-list__item">
+          <li>
             <div class="section section--cool-blue"><p>This is item #2 in the list.</p></div>
           </li>
-          <li class="h-list__item">
+          <li>
             <div class="section section--dark-red"><p>This is item #3 in the list.</p></div>
           </li>
         </ul>
@@ -221,17 +216,17 @@
 
         <h3 class="hdg hdg_3">Wrapping Horizontal List: </h3>
         <ul class="h-list h-list--wrap">
-          <li class="h-list__item">
+          <li>
             <div class="section section--cool-blue" style="width: 150px;">
               <p>This item will wrap.</p>
             </div>
           </li>
-          <li class="h-list__item">
+          <li>
             <div class="section section--dark-red" style="width: 150px;">
               <p>This item will wrap too.</p>
             </div>
           </li>
-          <li class="h-list__item">
+          <li>
             <div class="section section--cool-blue" style="width: 150px;">
               <p>And this as well.  </p>
             </div>
@@ -239,39 +234,36 @@
         </ul>
         <div class="vr_2"></div>
         <p>This list wraps, meaning when it's child items are too big for this 800px container, they'll sensibly wrap and keep their set width.</p>
-        <p>The h-list is achieved via flex-box, and with flexbox we can get numerous styles of wrapping horizontal lists.</p>
+        <p>The h-list is achieved via flex-box, and with flexbox we can get numerous styles of wrapping horizontal lists. <em>Note that the wrapping is not flush though, to acheive a flush wrapping, we must use other layout elements than a simple list.</em></p>
       </div>
-
-      <div class="vr_5"></div>
 
       <div id="buttons" class="section stack">
         <h2 class="hdg hdg_2">Buttons</h2>
         <p>Every app uses buttons, and generally there are multiple styles.</p>
 
-        <p>Generally, buttons are around 34px high, so they can be easily pressed by both a mouse, or a users finger on a mobile device.</p>
-        <button class="btn">Button</button>
-        <!-- <div class="vr_1"></div> -->
+        <p>Generally, buttons are at least 34px high (and ours are taller), so they can be easily pressed by both a mouse, or a users finger on a mobile device.</p>
+        <ul class="h-list h-list--no-padding">
+          <li>
+            <button class="btn btn--primary">Submit</button>
+          </li>
+          <li>
+            <button class="btn btn--danger">Delete</button>
+          </li>
+          <li>
+            <button class="btn btn--cancel">Cancel</button>
+          </li>
+        </ul>
         <code>
-          &lt;button class="btn"&gt;<br/>
-          &nbsp;&nbsp;&nbsp;Button<br/>
-          &lt;/button&gt;
-        </code>
+          &lt;button class="btn btn--primary"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;Submit<br/>
+          &lt;/button&gt;<br/><br/>
 
-        <h3 class="hdg hdg_3">Danger Button:</h3>
-        <button class="btn btn--danger">Danger!</button>
-        <!-- <div class="vr_1"></div> -->
-        <code>
           &lt;button class="btn btn--danger"&gt;<br/>
-          &nbsp;&nbsp;&nbsp;Button<br/>
-          &lt;/button&gt;
-        </code>
+          &nbsp;&nbsp;&nbsp;Danger<br/>
+          &lt;/button&gt;<br/><br/>
 
-        <h3 class="hdg hdg_3">Cancel Button:</h3>
-        <button class="btn btn--cancel">Cancel...</button>
-        <!-- <div class="vr_1"></div> -->
-        <code>
           &lt;button class="btn btn--cancel"&gt;<br/>
-          &nbsp;&nbsp;&nbsp;Button<br/>
+          &nbsp;&nbsp;&nbsp;Cancel<br/>
           &lt;/button&gt;
         </code>
 
@@ -287,8 +279,6 @@
         </code>
 
       </div>
-
-      <div class="vr_5"></div>
 
       <div id="tables" class="section stack">
         <h2 class="hdg hdg_2">Tables</h2>
@@ -323,6 +313,19 @@
           </tbody>
         </table>
         <!-- <div class="vr_1"></div> -->
+
+      </div>
+
+      <div id="forms" class="section stack">
+        <h2>Forms</h2>
+        <p><em>Forms are the web</em>. Before the ubiquity of JavaScript, forms were how developers made the web custom. Any non-trivial website will have forms. Of all the html elements, <em>forms are where you should strive for semantic, correct markup.</em> Luckily, forms are natively accessible, you just need to use markup as intended.</p>
+
+      </div>
+
+      <div id="form-validations" class="section stack">
+        <h2>Form Validations</h2>
+        <p>Form inputs in a browser accept any value a user can key or mouse in, meaning that there is a high liklihood a form's value will be invalid, incomprehensible or unusuable by you. It's prudent then to valid the input of a form before it can be submitted to your server for further processing (your server should run it's own set of validations as well).</p>
+
 
       </div>
     </div>

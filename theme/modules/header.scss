@@ -1,12 +1,11 @@
-@import '../elements/variables.scss';
+@import '../elements/variables-scss';
 
 .page-header {
-  height: 60px;
   // The header inverts our page colors
-  background-color: $txt-color;
-  color: $background-color;
-  margin-bottom: $base-rhythm * 2;
-  padding: $base-rhythm;
+  background-color: var(--color-darkish);
+  color: var(--color-light);
+  margin-bottom: var(--s-1);
+  padding: var(--s0);
 
   position: sticky;
   top: 0;

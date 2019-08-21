@@ -1,41 +1,28 @@
-@import './variables';
-
 a {
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: border-color 0.1s;
-  font-size: 1rem;
-  color: $link-color;
+  color: var(--color-link);
 }
 
 a:hover,
 a:focus,
 a:active {
   outline: 0;
-  border-color: $link-color;
+  border-color: var(--color-link);
 }
 
 a:visited {
-  color: $link-color;
+  color: var(--color-link);
 }
 
 a.dark-contrast {
   &:hover,
   &:focus,
   &:active {
-    border-color: $link-contrast-color;
+    border-color: var(--color-lightish);
   }
   &:visited {
-    color: $link-contrast-color;
+    color: var(--color-lightish);
   }
-}
-
-/* TABLET SIZE */
-@media (min-width: $tablet) {
-  a { font-size: 16px; }
-}
-
-/* DESKTOP SIZE */
-@media (min-width: $desktop) {
-  a { font-size: 18px; }
 }

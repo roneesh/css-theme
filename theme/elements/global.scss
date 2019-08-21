@@ -1,27 +1,43 @@
+/*
+From MDN:
+The :root CSS pseudo-class matches the root element of a tree representing the document.
+In HTML, :root represents the <html> element and is identical to the selector html,
+except that its specificity is higher.
+*/
+
+:root {
+  // background-color: var(--color-light);
+  // color: var(--color-dark);
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
 .smooth-scroll {
   scroll-behavior: smooth;
 }
 
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
+* {
+  max-width: var(--measure);
+}
+
+html,
+body,
+div,
+code,
+header,
+nav,
+main,
+ul, ol,
+table, tr, td,
+footer {
+  max-width: none;
+}
+
+
 body {
-  background-color: $background-color;
-}
-
-.centered {
-  width: 100%;
-  max-width: $tablet;
-  padding: 0 $base-rhythm * 3;
-  margin: 0 auto;
-  padding-bottom: 30px;
-}
-
-@media (min-width: 0px) and (max-width: $viewMin) {
-  // In this app, below 200px the app is completely blank.
-  // We can't support micro viewports.
-  * {
-    display: none !important;
-  }
+  background-color: var(--color-light);;
 }

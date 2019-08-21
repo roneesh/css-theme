@@ -1,0 +1,8 @@
+@mixin stack($margin) {
+  > * + * {
+    margin-top: $margin;
+  }
+  > * + code {
+    margin-top: $margin;
+  }
+}

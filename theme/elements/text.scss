@@ -1,71 +1,50 @@
-@import './variables';
+@import './variables-scss';
 
 :root {
-  font-size: calc(1rem + 0.5vw);
+  line-height: var(--line-height);
+  font-family: var(--font-main);
+  font-size: var(--font-size); // calc(.333vw + 1rem);
+    // this will set the font-size that all "rem" calculations base off. of
+    // Using calc and vw ensures the font-size scales for the entire document
+    // since any rem values will scale off of this font-size.
+
+  // font-size: 1em;
+    // this would set the font-size to the device specific standard of 1em,
+    // in Chrome this would be 16px, on a phone it might be smaller.
+    // The problem with using this method is that the font is not responsive:
+    // sizes would be fixed for all viewports. For a phone, that's fine,
+    // users can't resize their phone screen, but for web browsers it poses
+    // a problem, so 1em (or any fixed size), is not desirable.
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: var(--font-contrast-from-main);
+}
+p, h1, h2, h3, h4, h5, h6, li, figcaption {
+  max-width: var(--max-measure);
+  margin: 0;
 }
 
 code {
-  font-size: 1rem;
+  margin: 0;
+  font-size: var(--s-1);
   display: block;
   background-color: #ccc;
-  padding: $base-rhythm / 2;
+  padding: var(--s-1);
   border-radius: 1px;
   font-family: monospace;
 }
 
-p, code {
-  margin-bottom: 0;
-  // margin-bottom: $base-rhythm;
-  // line-height: 1.4rem;
-}
-
-/* MOBILE SIZE */
-
-.txt-small {
-  font-size: 12px;
-}
-
-p,
-.txt {
-  font-size: 14px;
-  font-size: calc(1rem + 0.25vw);
-}
-
-.txt-large {
-  font-size: 16px;
-  font-size: calc(1rem + 1vw);
-}
-
-/* TABLET SIZE */
-@media (min-width: $tablet) {
-  .txt-small {
-    font-size: 14px;
-  }
-
-  p,
-  .txt {
-    font-size: 16px;
-  }
-
-  .txt-large {
-    font-size: 18px;
-  }
-}
-
-/* DESKTOP SIZE */
-@media (min-width: $desktop) {
-  .txt-small {
-    font-size: 16px;
-  }
-
-  p,
-  .txt {
-    font-size: 18px;
-  }
-
-  .txt-large {
-    font-size: 20px;
-  }
+/* MOBILE FIRST TEXT, FROM SMALL TO LARGE SIZE */
+small, .txt-small  { font-size: var(--s-1); }
+.txt               { font-size: var(--s0);  }
+.txt-large         { font-size: var(--s1); }
+h3                 { font-size: var(--s2); }
+h2                 { font-size: var(--s3); }
+h1                 { font-size: var(--s4); }
+h1, h2, h3 {
+  strong { font-size: 1.125em; } // em so they grow relative to the heading size
+  i, svg { font-size: 0.75em; } // em so they shriunk relative to the heading size
 }
 
 /* OTHER TEXT UTILS */
@@ -74,7 +53,7 @@ p,
 }
 
 .txt-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .txt-italic {

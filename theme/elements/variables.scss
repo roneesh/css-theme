@@ -1,45 +1,51 @@
-// COLORS
+:root {
+  // fonts
+  --font-main: 'Source Sans Pro', sans-serif;
+  --font-contrast-from-main: 'Playfair Display', serif;
+  --font-mono: Menlo,Courier,Courier New,Andale Mono,monospace;
+  --font-size: calc(.333vw + var(--s0));
 
-// option 0.1
-// $background-color: #FBF9F9;
-// $txt-color: #212529;
-// $bg-contrast-1: #ffffff;
-// $border-color: #000000;
-// $cool-blue: #2288ee;
-// $navy-blue: #0066CC;
-// $cool-red: lighten(red, 20%);
-// $dark-red: darkred;
-// $gray: gray;
+  // colors
+  --color-primary: #0A2463;
+  --color-info: yellow;
+  --color-success: #8ED081;
+  --color-danger: #912F40;
+  --color-link: #855959;
 
-// option 0.2 - grayscale
+  --color-dark: #050505;
+  --color-darkish: #404040;
+  --color-mid: grey;
+  --color-lightish: #e6e6e6;
+  --color-light: #fafafa;
 
-// grays
-$white: #ffffff;
-$lighter-gray: #999999;
-$gray: #666666;
-$darker-gray: #333333;
-$black: #855959;
+  // theme attempt
+  --color-primary: #0A2463;
+  --color-info: yellow;
+  --color-success: #8ED081;
+  --color-danger: #912F40;
+  --color-link: #855959;
+  --page-bg: #fafafa;
+  --text-color: #050505;
+  --color-darkish: #404040;
+  --color-mid: grey;
+  --color-lightish: #e6e6e6;
 
-// theme colors:
-$background-color: $white;
-$section-background-color: $white;
-$txt-color: $darker-gray;
-$border-color: $gray;
-$link-color: $black;
-$link-contrast-color: $white;
-
-$button-color: $black;
-$button-bg-hover: $gray;
-$button-bg-active: $darker-gray;
-
-$table-border-color: $gray;
-$table-hover-color: $lighter-gray;
-
-
-// LAYOUT
-$base-rhythm: 10px;
-
-// BREAKPOINTS
-$viewMin: 200px;
-$tablet: 768px;
-$desktop: 1024px;
+  // sizes
+  --ratio: 1.25;
+  --s-5: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-4: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-3: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-2: calc(var(--s0)/var(--ratio)/var(--ratio));
+  --s-1: calc(var(--s0)/var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0)*var(--ratio));
+  --s2: calc(var(--s0)*var(--ratio)*var(--ratio));
+  --s3: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio));
+  --s4: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+  --s5: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+  --max-measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8*var(--ratio));
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+}

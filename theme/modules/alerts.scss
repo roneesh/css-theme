@@ -1,18 +1,16 @@
-@import '../elements/variables.scss';
+@import './section';
+@import '../elements/layout-mixins';
 
 #alerts-container {
   position: fixed;
-  top: 80px;
+  top: var(--s0);
   width: 100%;
-  padding: $base-rhythm * 2;
+  padding: var(--s-1);
+  @include stack(1.25rem);
 }
 
 .alert {
-  padding: $base-rhythm;
-  position: relative;
-  margin-bottom: $base-rhythm * 2;
-  border-radius: $base-rhythm / 2;
-  transition: opacity 0.5s;
+  @include section();
 }
 
 .alert--fade-out {
@@ -20,11 +18,21 @@
 }
 
 .alert--primary {
-  background-color: $lighter-gray;
-  color: black;
+  background-color: var(--color-primary);
+  color: var(--page-bg);
 }
 
 .alert--danger {
-  background-color: $lighter-gray;
-  color: red;
+  background-color: var(--color-danger);
+  color: var(--page-bg);
+}
+
+.alert--success {
+  background-color: var(--color-success);
+  color: var(--page-bg);
+}
+
+.alert--info {
+  background-color: var(--color-info);
+  color: var(--text-color);
 }

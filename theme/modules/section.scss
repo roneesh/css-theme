@@ -1,9 +1,15 @@
-@import '../elements/variables.scss';
-
-$box-shadow-size: $base-rhythm / 2;
+@import '../elements/layout-mixins';
 
 .section {
-  padding: $base-rhythm * 2;
-  border: 2px solid $border-color;
-  box-shadow: $box-shadow-size $box-shadow-size 0 0 $border-color;
+  @include stack(1rem);
+  padding: var(--s-1);
+  border: 2px solid var(--color-mid);
+  box-shadow: 5px 5px 0 0 var(--color-mid);
+}
+
+@mixin section {
+  @include stack(1rem);
+  padding: var(--s-1);
+  border: 2px solid var(--color-mid);
+  box-shadow: 5px 5px 0 0 var(--color-mid);
 }

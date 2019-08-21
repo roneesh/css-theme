@@ -2,16 +2,15 @@
 @import './elements/variables';
 @import './elements/font-faces';
 
-// alphabetical imports except variables
+// alphabetical imports except variables and reset
 // any other organization required for imports would be an anti-pattern
 @import './elements/accessibility';
 @import './elements/buttons';
+@import './elements/forms';
 @import './elements/global';
-@import './elements/heading';
 @import './elements/layouts';
 @import './elements/links';
 @import './elements/lists';
-@import './elements/spacing';
 @import './elements/tables';
 @import './elements/text';
 @import './elements/z-index';

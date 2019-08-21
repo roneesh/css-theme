@@ -1,45 +1,46 @@
 .btn {
-  height: 35px;
-  border: 2px solid $button-color;
-  border-radius: 2px;
+  border: 2px solid var(--color-dark);
+  border-radius: 4px;
   cursor: pointer;
+  font-family: var(--font-main);
+  font-size: var(--s0 );
+  padding: var(--s-2);
+  background-color: transparent;
+
+  &:hover, &:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+  &:active {
+    transform: translateY(2px) translateX(2px);
+  }
 }
-.btn:hover,
-.btn:focus {
-  outline: 0;
-  background-color: $button-bg-hover;
-  color: $white;
-}
-.btn:active {
-  background-color: $button-bg-active;
-  color: $white;
+
+.btn--primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 2px 2px 0 0 var(--color-primary);
+  &:active {
+    box-shadow: 0px 0px 0 0 var(--color-primary);
+  }
 }
 
 .btn--danger {
-  background-color: auto;
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+  box-shadow: 2px 2px 0 0 var(--color-danger);
+  &:active {
+    box-shadow: 0px 0px 0 0 var(--color-danger);
+  }
 }
-.btn--danger:hover,
-.btn--danger:focus {
-  background-color: auto;
-  color: auto;
-}
-.btn--danger:active {
-  background-color: auto;
-  color: auto;
-}
-
 
 .btn--cancel {
-  background-color: auto;
-}
-.btn--cancel:hover,
-.btn--cancel:focus {
-  background-color: auto;
-  color: auto;
-}
-.btn--cancel:active {
-  background-color: auto;
-  color: auto;
+  color: var(--color-mid);
+  border-color: var(--color-mid);
+  box-shadow: 2px 2px 0 0 var(--color-mid);
+  &:active {
+    box-shadow: 0px 0px 0 0 var(--color-mid);
+  }
 }
 
 .btn--link {
@@ -50,20 +51,23 @@
   border-radius: 0;
   padding: 0;
   transition: border-color 0.1s;
-}
-.btn--link:hover,
-.btn--link:focus,
-.btn--link:active  {
-  border-color: $link-color;
-  background-color: transparent;
-  color: $txt-color;
+  bottom: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--color-link);
+    background-color: transparent;
+    color: var(--color-darkish);
+    text-decoration: none;
+    transform: none;
+  }
 }
 
 .btn--link.dark-contrast {
-  color: $link-contrast-color;
-}
-.btn--link.dark-contrast:hover,
-.btn--link.dark-contrast:focus,
-.btn--link.dark-contrast:active {
-  border-color: $link-contrast-color;
+  color: var(--color-lightish);
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--color-lightish);
+  }
 }

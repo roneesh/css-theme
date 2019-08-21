@@ -1,46 +1,35 @@
-@import '../elements/variables.scss';
+@import '../elements/variables-scss';
 
 .site-nav {
   position: fixed;
-  top: $base-rhythm * 8;
-  right: $base-rhythm;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  top: 0;
+  right: calc(var(--s2) + 4px);
 }
 
 .site-nav__toggle {
-  height: 32px;
-  // margin-bottom: $base-rhythm;
+  text-align: right;
+  font-size: 2.5rem;
 }
 
 .site-nav__toggle__label {
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  background-color: $lighter-gray;
-  color: $white;
+  font-size: var(--s2);
+  color: var(--color-dark);
   cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .site-nav__switch {
   visibility: hidden;
-  width: 1px;
-  height: 1px;
+  width: 0;
+  height: 0;
 }
 
 .site-nav__menu {
   opacity: 0;
-  background-color: $lighter-gray;
-  color: $white;
+  background-color: var(--color-darkish);
+  color: var(---color-light);
   transition: opacity 0.5s;
-  padding: $base-rhythm * 2;
-  border: 1px solid $black;
+  padding: var(--s-1);
+  border: 1px solid var(--color-dark);
 }
 
 .site-nav__switch:checked ~ .site-nav__menu {

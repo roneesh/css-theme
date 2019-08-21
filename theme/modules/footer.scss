@@ -1,11 +1,10 @@
-@import '../elements/variables.scss';
+@import '../elements/variables-scss';
 
 .page-footer {
-
   // The footer inverts our page colors
-  background-color: $txt-color;
-  color: $background-color;
-  padding: $base-rhythm;
+  background-color: var(--color-darkish);
+  color: var(--color-light);
+  padding: var(--s0);
 
   position: sticky;
   bottom: 0;
