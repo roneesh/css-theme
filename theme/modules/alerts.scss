@@ -11,6 +11,7 @@
 
 .alert {
   @include section();
+  text-align: center;
 }
 
 .alert--fade-out {

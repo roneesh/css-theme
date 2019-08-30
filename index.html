@@ -8,7 +8,7 @@
   <body>
     <div class="centered stack">
       <header>
-        <h1 class="hdg hdg_1">Elements</h1>
+        <h1>Elements</h1>
         <nav class="site-nav">
           <div class="site-nav__toggle">
             <label class="site-nav__toggle__label" for="site-nav-toggle">&#9776;</label>
@@ -23,6 +23,9 @@
                 <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
               </li>
               <li>
+                <a class="dark-contrast" href="./grid.html" title="View Modules">Grid</a>
+              </li>
+              <li>
                 <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
                   Back To Top
                 </button>
@@ -32,8 +35,7 @@
         </nav>
       </header>
       <p>This is a list of html elements written with semantic markup. Elements form the basis of <a href="/modules.html">modules</a>.</p>
-      <!-- <div class="vr_1"></div> -->
-      <nav aria-labelledby="page-navigation" class="stack-small">
+      <nav aria-labelledby="page-navigation" class="stack--small">
         <p id="page-navigation">Elements:</p>
         <ol class="v-list">
           <li>
@@ -63,19 +65,18 @@
         </ol>
       </nav>
 
-      <div id="text" class="section stack">
-        <h2 class="hdg hdg_2">Text</h2>
+      <div id="text" class="section">
+        <h2>Text</h2>
         <p>All apps use text, these are p tags and span tags. Your app should consistently define sizes for various levels of text.</p>
 
-        <h3 class="hdg hdg_3">Standard Text: </h3>
+        <h3>Standard Text: </h3>
         <p>Standard text,</p>
-        <span class="txt">also Standard</span>
         <code>
           &lt;p&gt;Standard text,&lt;/p&gt;<br/>
           &lt;span class="txt"&gt;also Standard&lt;/span&gt;
         </code>
 
-        <h3 class="hdg hdg_3">Small Text: </h3>
+        <h3>Small Text: </h3>
         <p class="txt-small">Small,</p>
         <small>Also small</small>
         <code>
@@ -83,15 +84,15 @@
           &lt;small&gt;Also Small&lt;/small&gt;
         </code>
 
-        <h3 class="hdg hdg_3">Large Text: </h3>
+        <h3>Large Text: </h3>
         <p class="txt-large">Lorem ipsum dolor sit amet</p>
         <code>&lt;p class="txt-large"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
 
-        <h3 class="hdg hdg_3">Centered Text: </h3>
+        <h3>Centered Text: </h3>
         <p class="txt-centered">Lorem ipsum dolor sit amet</p>
         <code>&lt;p class="txt-centered"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
 
-        <h3 class="hdg hdg_3">Italic Text: </h3>
+        <h3>Italic Text: </h3>
         <p class="txt-centered">
           <span class="txt-italic">Italic</span>, <em>Also Italic</em>
         </p>
@@ -100,7 +101,7 @@
           &lt;em&gt;Also Italic&lt;/em&gt;
         </code>
 
-        <h3 class="hdg hdg_3">Bold Text: </h3>
+        <h3>Bold Text: </h3>
         <p class="txt-centered">
           <span class="txt-bold">Bold</span>, <strong>Also Bold</strong>
         </p>
@@ -110,22 +111,21 @@
         </code>
       </div>
 
-      <div id="links" class="section stack">
-        <h2 class="hdg hdg_2">Links</h2>
+      <div id="links" class="section">
+        <h2>Links</h2>
         <p>All apps use links, these are a tags. Your app should not only define styles for links, but also for the three pseudo classes of links: :hover, :focus, :active. Hover over <a href="#">this link</a> to see how it's styling changes: </p>
 
-        <!-- <div class="vr_1"></div> -->
         <code>&lt;a href="#"&gt;Lorem ipsum dolor sit amet&lt;/a&gt;</code>
 
         <p>Here's a link with the hover stlying pre-applied so you can see it:</p>
         <a href="#" style="border-color:#000000;">Back to top link!</a>
       </div>
 
-      <div id="lists" class="section stack">
-        <h2 class="hdg hdg_2">Lists</h2>
+      <div id="lists" class="section">
+        <h2>Lists</h2>
         <p>Most every app uses lists. These are &lt;ul&gt; and &lt;ol&gt; tags.</p>
 
-        <h3 class="hdg hdg_3">Vertical List: </h3>
+        <h3>Vertical List: </h3>
         <ul class="v-list">
           <li>Foo</li>
           <li>Bar</li>
@@ -139,7 +139,7 @@
           &lt;/ul&gt;<br/>
         </code>
 
-        <h3 class="hdg hdg_3">Horizontal List: </h3>
+        <h3>Horizontal List: </h3>
         <ul class="h-list">
           <li>Foo</li>
           <li>Bar</li>
@@ -154,7 +154,7 @@
         </code>
         <p>Note that horizontal lists have no list style type.</p>
 
-        <h3 class="hdg hdg_3">Ordered Lists: </h3>
+        <h3>Ordered Lists: </h3>
         <ol class="h-list">
           <li>Foo</li>
           <li>Bar</li>
@@ -175,11 +175,11 @@
         <p>Ordered lists will have their number in the list in both horizontal and veritcal configurations.</p>
       </div>
 
-      <div id="lists-blocks" class="section stack">
-        <h2 class="hdg hdg_2">Lists Of Block Level Items</h2>
+      <div id="lists-blocks" class="section">
+        <h2>Lists Of Block Level Items</h2>
         <p>Every app uses lists, but its more common to put block level elements in lists.</p>
         <p>Let's put some of these sections themselves in our lists.</p>
-        <h3 class="hdg hdg_3">Vertical List: </h3>
+        <h3>Vertical List: </h3>
         <ul class="v-list">
           <li>
             <div class="section section--cool-blue"><p>This is section #1 in the list.</p></div>
@@ -193,11 +193,11 @@
         </ul>
         <code>
           &lt;li&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&lt;div class="section stack"&gt;...&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;div class="section"&gt;...&lt;/div&gt;<br/>
           &lt;/li&gt;
         </code>
 
-        <h3 class="hdg hdg_3">Horizontal List: </h3>
+        <h3>Horizontal List: </h3>
         <ul class="h-list">
           <li>
             <div class="section section--dark-red"><p>This is item #1 in the list.</p></div>
@@ -214,7 +214,7 @@
         <p> Note that eventually at a small enough screen size, this list will overflow its container.</p>
         <p>If we can put block level elements in our lists, that means lists are a suitable semantic for a variety of layouts.</p>
 
-        <h3 class="hdg hdg_3">Wrapping Horizontal List: </h3>
+        <h3>Wrapping Horizontal List: </h3>
         <ul class="h-list h-list--wrap">
           <li>
             <div class="section section--cool-blue" style="width: 150px;">
@@ -237,8 +237,8 @@
         <p>The h-list is achieved via flex-box, and with flexbox we can get numerous styles of wrapping horizontal lists. <em>Note that the wrapping is not flush though, to acheive a flush wrapping, we must use other layout elements than a simple list.</em></p>
       </div>
 
-      <div id="buttons" class="section stack">
-        <h2 class="hdg hdg_2">Buttons</h2>
+      <div id="buttons" class="section">
+        <h2>Buttons</h2>
         <p>Every app uses buttons, and generally there are multiple styles.</p>
 
         <p>Generally, buttons are at least 34px high (and ours are taller), so they can be easily pressed by both a mouse, or a users finger on a mobile device.</p>
@@ -269,7 +269,7 @@
 
         <p>Finally, it's a common pattern to want a button to look like a link. However it's important to use a tags when a user will leave the page, and use the button tag when the press will trigger an effect on the current page.</p>
 
-        <h3 class="hdg hdg_3">Link Button:</h3>
+        <h3>Link Button:</h3>
         <button class="btn btn--link">I'm actually a button...</button>
         <div class="vr_1"></div>
         <code>
@@ -280,8 +280,8 @@
 
       </div>
 
-      <div id="tables" class="section stack">
-        <h2 class="hdg hdg_2">Tables</h2>
+      <div id="tables" class="section">
+        <h2>Tables</h2>
         <p>Occasionally apps use tables, and they're normally hard to get right. This is a simple, clear table treatment with a responsive design. The responsive design simply collapses rows into blocks, showing each row as a block item. The table utilizes a fixed table layout, with text overflow clipped by ellipses. You can add hover states by adding table--hover.</p>
 
         <table class="table table--hover">
@@ -312,19 +312,64 @@
             </tr>
           </tbody>
         </table>
-        <!-- <div class="vr_1"></div> -->
 
+        <code>
+          &lt;table class="table table--hover"&gt;<br/>
+          &nbsp;&nbsp;&nbsp; &lt;thead&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Email&lt;/th&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Verified?&lt;/th&gt;<br/>
+          &nbsp;&nbsp;&nbsp; &lt;/thead&gt;<br/>
+
+          &nbsp;&nbsp;&nbsp; &lt;tbody&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John Smith&lt;/td&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John@Smith.com&lt;/td&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Yes&lt;/td&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+          &nbsp;&nbsp;&nbsp; &lt;/tbody&gt;<br/>
+          &lt;/table&gt;
+        </code>
       </div>
 
-      <div id="forms" class="section stack">
+      <div id="forms" class="section">
         <h2>Forms</h2>
         <p><em>Forms are the web</em>. Before the ubiquity of JavaScript, forms were how developers made the web custom. Any non-trivial website will have forms. Of all the html elements, <em>forms are where you should strive for semantic, correct markup.</em> Luckily, forms are natively accessible, you just need to use markup as intended.</p>
+        <p>The markup here is a bit onerous to translate into a code block, so you can <em>right click the form, and click inspect element</em> in your browser.</p>
 
+        <form class="stack form">
+          <h3>Sign up for more Reasonably Good Content</h3>
+          <div class="form__input">
+            <input id="signup-form--name" type="text" name="name" />
+            <label class="txt-small" for="signup-form--name">Name</label>
+          </div>
+          <div class="form__input">
+            <input id="signup-form--email" type="email" name="email" required="true" />
+            <label class="txt-small" for="signup-form--email">Email<sup>*</sup></label>
+          </div>
+          <div class="cluster cluster--right">
+            <label class="txt-small" for="signup-form--offers">Send me cool offers from friends of Reasonably Good	&trade;</label>
+            <div class="checkbox">
+              <input id="signup-form--offers" class="checkbox" type="checkbox" name="offers" checked/>
+              <label for="signup-form--offers"></label>
+            </div>
+          </div>
+          <div class="cluster cluster--right">
+            <button type="button" class="btn btn--cancel">Cancel</button>
+            <button type="submit" class="btn btn--primary">
+              Subscribe Now
+            </button>
+          </div>
+          <div class="cluster cluster--right">
+            <p><small><sup>*</sup>Psst! We'll never share your email with anyone.</small></p>
+          </div>
+        </form>
       </div>
 
-      <div id="form-validations" class="section stack">
+      <div id="form-validations" class="section">
         <h2>Form Validations</h2>
-        <p>Form inputs in a browser accept any value a user can key or mouse in, meaning that there is a high liklihood a form's value will be invalid, incomprehensible or unusuable by you. It's prudent then to valid the input of a form before it can be submitted to your server for further processing (your server should run it's own set of validations as well).</p>
+        <p>Form inputs in a browser accept any value a user can key or mouse in, meaning that there is a high likelihood a form's value will be invalid, incomprehensible or unusuable by you. It's prudent then to valid the input of a form before it can be submitted to your server for further processing (your server should run it's own set of validations as well).</p>
 
 
       </div>

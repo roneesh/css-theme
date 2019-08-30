@@ -1,0 +1,244 @@
+<html class="smooth-scroll">
+  <head>
+    <title>HTML and CSS Elements</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Source+Sans+Pro:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/index.scss" />
+  </head>
+  <body>
+    <div class="centered stack">
+      <header>
+        <h1>Grids</h1>
+        <nav class="site-nav">
+          <div class="site-nav__toggle">
+            <label class="site-nav__toggle__label" for="site-nav-toggle">&#9776;</label>
+          </div>
+          <input class="site-nav__switch" type="checkbox" id="site-nav-toggle" />
+          <div class="site-nav__menu">
+            <ul class="v-list v-list--no-padding">
+              <li>
+                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+              </li>
+              <li>
+                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+              </li>
+              <li>
+                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                  Back To Top
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <p>This is a grid system using CSS Grid, this grid is meant to display both <a href="/modules.html">modules</a>, or indiviual <a href="/elements">elements</a>.</p>
+      <nav aria-labelledby="page-navigation" class="stack--small">
+        <p id="page-navigation">Grid:</p>
+        <ol class="v-list">
+          <li>
+            <a href="#horizontally-responsive-grid">A Horizontally Responsive Grid</a>
+          </li>
+          <li>
+            <a href="#vertically-responsive-grid">A Vertically Responsive Grid</a>
+          </li>
+          <li>
+            <a href="#mondrian">A Mondrian Style Grid</a>
+          </li>
+          <li>
+            <a href="#flow-float-flexbox-grid">A Layout Using: Flow, Float, Flexbox, Grid</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div id="horizontally-responsive-grid" class="section">
+        <h2>A Horizontally Responsive Grid</h2>
+
+        <p>CSS grid is similar to flexbox, it is a parent -> child relationship between html elements. A single element is the "parent" container, it has a property of "display: grid", and then each direct child ("> *") is placed in the grid. Children of children are not considered to be "in the grid", nor are elements adjacent to or above the parent.</p>
+
+        <p>This very basic grid that defines no rows, only columns. So browsers will simply define rows per their default algorithm. This means most likely rows will be defined to fit the height of the content. The columns are in relative units of "1fr", fr meaning "fraction". if every column is a width of "1 fraction", then all cols are equal width.</p>
+
+        <p>Because this grid uses a 1fr width, it's horizontally responsive. It will fit in its container as many columns as you ask, all equal sized.</p>
+
+        <div class="tile-grid">
+          <img src="http://placekitten.com/g/100/50" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/150" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/100" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/70" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/120" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/140" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/100" alt="A kitten!" />
+          <img src="http://placekitten.com/g/100/10" alt="A kitten!" />
+        </div>
+        <code>
+          &lt;div class="grid"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <div id="vertically-responsive-grid" class="section">
+        <h2>A Vertically Responsive Grid</h2>
+        <p>Using rows and the various units of height they can have, we can define a grid that fits its column into the viewport both vertically as well as horizontally.</p>
+
+        <p>Traditional "Responsive" design simply made sure things fit the "width" of the viewport, and really made no regards to the height. It was assumed users would scroll.</p>
+
+        <p>With CSS grid, we can make a layout that responds to vertically shrinking/increasing the height of the viewport.</p>
+
+        <p>In this example, my headshot is tertiary to the nav links, so my headshot shrinks as you resize the page, and the links always remain in the viewport. Try it out-- shrink or grow the page in any direction and see if you can remove the links from view.</p>
+
+        <div class="landing">
+          <img src="./assets/images/headshot.jpg" alt="Roneesh Vashisht headshot" />
+          <h2>Roneesh Vashisht</h2>
+          <nav>
+            <ul class="h-list h-list--no-padding">
+              <li>
+                <a href="./index.html" title="View Elements">Elements</a>
+              </li>
+              <li>
+                <a href="./modules.html" title="View Modules">Modules</a>
+              </li>
+              <li>
+                <a href="./grid.html" title="View Grids">Grids</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <code>
+          &lt;div class="grid"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img .../&gt;<br/>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <div id="mondrian" class="section">
+        <h2>A Mondrian Using CSS Grid</h2>
+        <p>The above two grids utilized only columns or rows. They were an example of using CSS Grid in a single dimension.</p>
+
+        <p>A "Mondrian" is a grid layout of blocks of color, just like the paintings of Piet Mondrian. A Mondrian is inherently a 2-D layout, so it's ideal to use CSS Grid to recreate this.</p>
+
+        <div>
+          <ul class="mondrian">
+            <li><img src="./assets/images/01.jpg" alt="white"/></li>
+            <li><img src="./assets/images/02.jpg" alt="white"/></li>
+            <li><img src="./assets/images/03.jpg" alt="yellow"/></li>
+            <li><img src="./assets/images/04.jpg" alt="white"/></li>
+            <li><img src="./assets/images/05.jpg" alt="white"/></li>
+            <li><img src="./assets/images/06.jpg" alt="red"/></li>
+            <li><img src="./assets/images/07.jpg" alt="yellow"/></li>
+            <li><img src="./assets/images/08.jpg" alt="white"/></li>
+            <li><img src="./assets/images/09.jpg" alt="white"/></li>
+            <li><img src="./assets/images/10.jpg" alt="white"/></li>
+            <li><img src="./assets/images/11.jpg" alt="black"/></li>
+            <li><img src="./assets/images/12.jpg" alt="white"/></li>
+            <li><img src="./assets/images/13.jpg" alt="white"/></li>
+            <li><img src="./assets/images/14.jpg" alt="yellow"/></li>
+            <li><img src="./assets/images/15.jpg" alt="white"/></li>
+            <li><img src="./assets/images/16.jpg" alt="blue"/></li>
+            <li><img src="./assets/images/17.jpg" alt="red"/></li>
+            <li><img src="./assets/images/18.jpg" alt="white"/></li>
+            <li><img src="./assets/images/19.jpg" alt="black"/></li>
+            <li><img src="./assets/images/20.jpg" alt="white with signature, Piet Mondrian 1920"/></li>
+          </ul>
+        </div>
+
+        <code>
+          &lt;ul class="mondrian"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img .../&gt;&lt;/li&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img .../&gt;&lt;/li&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img .../&gt;&lt;/li&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img .../&gt;&lt;/li&gt;<br/>
+          &lt;/ul&gt;
+        </code>
+      </div>
+
+      <div id="flow-float-flexbox-grid" class="section">
+        <h2>A Layout Using: Flow, Float, Flexbox, Grid</h2>
+        <p>It might be hard to see how the various CSS layout schemes can all be composed together to create layouts that are great for users. Luckily there's a trick: <strong>think small to large.</strong></p>
+
+        <p>The smallest scale of layout is between two html elements, for exmaple an "img" tag followed by a "p" tag. These elements should utilize flow to be organized:</p>
+
+        <code>
+          &lt;img alt="A kitten!"&gt;<br/>
+          &lt;p&gt;This kitten is cute!&lt;/p&gt;<br/>
+        </code>
+
+        <div class="markup-box">
+          <img src="http://placekitten.com/g/100/100" alt="A kitten!" />
+          <p>This kitten is cute!</p>
+        </div>
+
+        <p>Flow is great, it's natively mobile friendly, but for larger viewports, we might want to have some wrapping. We can achieve wrapping of text around images with "float". Sometimes float is just as simple as adding "float: left;" on the image, but it's common to "clear" your floats so the container encompasses their height.</p>
+
+        <div class="markup-box">
+          <img class="float-left" style="padding-right: 1rem;" src="http://placekitten.com/g/200/200" alt="A kitten!" />
+          <p style="margin-bottom: 1rem;">This kitten is cute! Also this is more text about the image, so it's good if we start wrapping text around the image. We're using float, which is a really old method of layout, <em>but, we're using float as it was intended, so it's still valid and correct to use!</em></p>
+          <p>There is one thing to consider though: <em>we had to clearfix this float.</em> Remember, if you use floats, you need to have your containers clear them.</p>
+        </div>
+
+        <code>
+          &lt;div class="clearfix"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;img class="float-left" alt="A kitten!" style="padding-right: 1rem;"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;p&gt;This kitten is cute...&lt;/p&gt;<br/>
+          &lt;/div&gt;
+        </code>
+
+        <p>Float got us a style we like, where text wraps an image, but often this specific mingling of images and text is only part of a larger layout. Now let's put this in the context of an adoption card, the card layout uses flexbox: </p>
+
+        <div class="markup-box">
+          <div class="card">
+            <div class="card__wrap-box">
+              <img class="float-left" style="padding-right: 1rem;" src="http://placekitten.com/g/200/200" alt="A kitten!" />
+              <p style="margin-bottom: 1rem;">Adopt Fritz! Talk about a cute cat! Their hobbies include: yarn, humans, scratches and of course... jumpin' 'round!</p>
+            </div>
+            <button class="btn btn--primary">Inquire about Fritz now!</button>
+          </div>
+        </div>
+
+        <p>This card is great, but wouldn't a <em>grid</em> of cards be better? Let's see an example in the below blue ribbon. Resize the page horizontally to see that the cards respond perfectly in a very simple .tile-grid container. This grid of cards has it all:
+        <ul class="v-list v-list--list-style-square">
+          <li>Flow + Float for the card's image and description</li>
+          <li>Flexbox for the entire card's vertical layout.</li>
+          <li>CSS Grid to layout the three cards horizontally, but also with very sensible responsive design <em>without media queries!</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ribbon ribbon--primary">
+      <div class="tile-grid">
+        <div class="card">
+          <div class="card__wrap-box">
+            <img class="float-left" src="http://placekitten.com/g/200/100" alt="Fritz the cat" />
+            <p>Adopt Fritz! Talk about a cute cat! Their hobbies include: yarn, humans, scratches and of course... jumpin' 'round!</p>
+          </div>
+          <button class="btn btn--primary">Inquire about Fritz now!</button>
+        </div>
+        <div class="card">
+          <div class="card__wrap-box">
+            <img class="float-left" src="http://placekitten.com/g/100/200" alt="A kitten!" />
+            <p>Adopt Buzz! Talk about a cute cat! Their hobbies include: yarn, humans, scratches and of course... jumpin' 'round!</p>
+          </div>
+          <button class="btn btn--primary">Inquire about Buzz now!</button>
+        </div>
+        <div class="card">
+          <div class="card__wrap-box">
+            <img class="float-left" style="padding-right: 1rem;" src="http://placekitten.com/g/75/150" alt="A kitten!" />
+            <p style="margin-bottom: 1rem;">Adopt Mary! Talk about a cute cat! Their hobbies include: yarn, humans, scratches and of course... jumpin' 'round!</p>
+          </div>
+          <button class="btn btn--primary">Inquire about Mary now!</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="centered stack">
+
+    </div>
+    <script src="./theme/index.js"></script>
+  </body>
+</html>

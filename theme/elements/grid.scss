@@ -1,0 +1,9 @@
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: var(--s0);
+  > * {
+    display: block;
+    width: 100%;
+  }
+}

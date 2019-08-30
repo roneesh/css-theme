@@ -1,12 +1,12 @@
 @import './elements/reset';
 @import './elements/variables';
-@import './elements/font-faces';
 
 // alphabetical imports except variables and reset
 // any other organization required for imports would be an anti-pattern
 @import './elements/accessibility';
 @import './elements/buttons';
 @import './elements/forms';
+@import './elements/grid';
 @import './elements/global';
 @import './elements/layouts';
 @import './elements/links';
@@ -21,3 +21,15 @@
 @import './modules/section';
 @import './modules/site-nav';
 @import './modules/sliders';
+
+@import './applications/blog';
+@import './applications/card';
+@import './applications/grids';
+@import './applications/modal';
+@import './applications/ribbon';
+
+.markup-box {
+  border: 1px dotted var(--color-dark);
+  padding: var(--s0);
+  @extend .clearfix;
+}

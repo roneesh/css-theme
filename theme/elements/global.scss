@@ -21,7 +21,7 @@ except that its specificity is higher.
 }
 
 * {
-  max-width: var(--measure);
+  max-width: var(--max-measure);
 }
 
 html,
@@ -29,15 +29,17 @@ body,
 div,
 code,
 header,
+footer,
 nav,
 main,
 ul, ol,
-table, tr, td,
-footer {
+a.wrapper,
+table, tr, td {
   max-width: none;
 }
 
 
 body {
-  background-color: var(--color-light);;
+  background-color: var(--color-light);
+  padding-bottom: 30px;
 }

@@ -1,0 +1,30 @@
+.card {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-lightish);
+  padding: 1rem;
+  *:last-child {
+    margin: var(--s0);
+    margin-top: auto;
+  }
+}
+
+.card__wrap-box {
+  img {
+    float: left;
+    max-width: 100%;
+    margin-bottom: var(--s-1);
+    padding: 0 var(--s0);
+    padding-top: 0;
+    height: auto;
+  }
+  p {
+    margin-bottom: var(--s5);
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

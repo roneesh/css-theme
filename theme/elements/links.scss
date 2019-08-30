@@ -26,3 +26,16 @@ a.dark-contrast {
     color: var(--color-lightish);
   }
 }
+
+// a wrapper link is one that wraps a block level element
+a.wrapper {
+  display: block;
+  text-decoration: none;
+  border-bottom: none;
+  transition: none;
+  color: inherit;
+  &:focus,
+  &:active {
+    outline: var(--color-darkish) auto 2px;
+  }
+}

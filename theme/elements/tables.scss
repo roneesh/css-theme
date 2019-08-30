@@ -3,8 +3,9 @@
 .table {
   width: 100%;
   table-layout: fixed;
+  font-size: var(--s-1);
   th {
-    padding: var(--s0);
+    padding: var(--s-1);
     border-bottom: 2px solid var(--color-mid);
     vertical-align: bottom;
     text-align: left;
@@ -28,8 +29,7 @@
   }
 
   &.table--hover tbody tr:hover {
-    background-color: var(---color-light);
-    color: var(---color-light);
+    background-color: var(--color-lightish);
   }
 
   // below tablet sizes, get responsive behavior by
@@ -53,13 +53,13 @@
 
     tr {
       display: block;
-      margin-bottom: var(--s-1);
+      margin-bottom: var(--s4);
     }
 
     td {
       border-bottom: 1px solid var(--color-mid);
       display: block;
-      font-size: .5rem;
+      font-size: var(--s-1);
       text-align: right;
       padding-left: 0;
       padding-right: 0;

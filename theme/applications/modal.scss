@@ -1,0 +1,62 @@
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: hidden;
+  outline: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  // z-index defined in ./elements/z-index
+}
+
+.modal--fade {
+  opacity: 0;
+  transition: opacity .15s linear;
+}
+
+.modal--show {
+  opacity: 1;
+}
+
+.modal__dialog {
+  max-width: 50%;
+  margin: var(--s1) auto;
+  position: relative;
+  // transform: translate(0,-25%);
+  > * {
+    background-color: var(--page-bg);
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: var(--s-5);
+  top: -0.32768rem;
+  font-size: var(--s4);
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+
+  &:focus {
+    outline: var(--color-darkish) auto 2px;
+  }
+}
+
+.modal--show .modal__dialog {
+  // transform: translate(0,0);
+}

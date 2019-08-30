@@ -40,7 +40,7 @@ export default class GlobalAlerts {
   _renderAlert (text, type) {
     const container = document.getElementById('alerts-container');
     const el = document.createElement('div');
-    el.textContent = 'id: ' + this.count + ' ' + text;
+    el.textContent = text;
     el.setAttribute('data-id', this.count);
     el.classList.add('alert', `alert--${type}`, 'alert--fade-out');
     container.appendChild(el);
