@@ -35,3 +35,8 @@
 .site-nav__switch:checked ~ .site-nav__menu {
   opacity: 1;
 }
+
+.itcss-menu {
+  // the triangular menu goes here.
+  display: flex;
+}

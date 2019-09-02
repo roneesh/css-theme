@@ -1,7 +1,4 @@
-// alphabetical imports except variables and reset
-// any other organization required for imports would be an anti-pattern
-
-// import in order of the ITCSS methodology:
+// import folders in order of the ITCSS methodology, and in each group of imports import files alphabetically. Any other form organization required for imports would be an anti-pattern.
 
 // 1. Settings - The broadest level of ITCSS, Pre-processor variables go here.
 @import './settings/variables';
@@ -17,33 +14,26 @@
 // 4. Base - The base elements are styled here.
 @import './base/buttons';
 @import './base/forms';
-@import './base/grid';
-@import './base/layouts';
 @import './base/links';
 @import './base/lists';
 @import './base/tables';
 @import './base/text';
 
 // 5. Objects -
-@import './objects/alerts';
-@import './objects/footer';
-@import './objects/header';
-@import './objects/section';
-@import './objects/site-nav';
+@import './objects/layouts';
 @import './objects/sliders';
 
-// 6. Components
+// 6. Components - These are designed pieces of UI, like a blog, card, etc.
+@import './components/alerts';
 @import './components/blog';
 @import './components/card';
 @import './components/grids';
 @import './components/modal';
 @import './components/ribbon';
+@import './components/section';
+@import './components/site-nav';
 
+// 7. Utilities - These are high specificity utility classes. This group also contains the z-index file, which manages z-index for the entire theme. Z-index is best managed in one single file so z-indexes can be comprehended in one place.
 @import './utilities/accessibility';
+@import './utilities/theme-preview';
 @import './utilities/z-index';
-
-.markup-box {
-  border: 1px dotted var(--color-dark);
-  padding: var(--s0);
-  @extend .clearfix;
-}

@@ -1,0 +1,5 @@
+.markup-box {
+  border: 1px dotted var(--color-dark);
+  padding: var(--s0);
+  @extend .clearfix;
+}
