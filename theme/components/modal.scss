@@ -17,6 +17,7 @@
   overflow-y: auto;
 
   margin: 0;
+  padding: var(--s0);
   background-color: rgba(0, 0, 0, 0.5);
   // z-index defined in ./elements/z-index
 }
@@ -31,7 +32,7 @@
 }
 
 .modal__dialog {
-  max-width: 50%;
+  max-width: var(--max-measure);
   margin: var(--s1) auto;
   position: relative;
   // transform: translate(0,-25%);

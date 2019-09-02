@@ -1,4 +1,4 @@
-@import '../elements/layout-mixins';
+@import '../tools/layout-mixins';
 
 .section {
   @include stack(1rem);

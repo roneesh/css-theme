@@ -1,4 +1,4 @@
-@import './variables-scss';
+@import '../settings/variables';
 
 .float-left {
   float: left;
@@ -9,6 +9,7 @@
     float: right;
   }
 }
+
 .clearfix:after {
   content: "";
   display: table;

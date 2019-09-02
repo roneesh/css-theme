@@ -52,22 +52,24 @@
   padding: 0;
   transition: border-color 0.1s;
   bottom: 0;
+  color: var(--color-link);
   &:hover,
   &:focus,
   &:active {
     border-color: var(--color-link);
+    color: var(--color-link);
     background-color: transparent;
-    color: var(--color-darkish);
     text-decoration: none;
     transform: none;
   }
 }
 
-.btn--link.dark-contrast {
+.btn--link-dark {
   color: var(--color-lightish);
   &:hover,
   &:focus,
   &:active {
+    color: var(--color-lightish);
     border-color: var(--color-lightish);
   }
 }

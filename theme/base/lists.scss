@@ -1,4 +1,4 @@
-@import './layout-mixins';
+@import '../tools/layout-mixins';
 
 ul, ol { list-style-position: inside; }
 ol { list-style-type: decimal; }

@@ -17,16 +17,16 @@
           <div class="site-nav__menu">
             <ul class="v-list v-list--no-padding">
               <li>
-                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+                <a class="link link--dark" href="./index.html" title="View Elements">Elements</a>
               </li>
               <li>
-                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+                <a class="link link--dark" href="./modules.html" title="View Modules">Modules</a>
               </li>
               <li>
-                <a class="dark-contrast" href="./grid.html" title="View Modules">Grid</a>
+                <a class="link link--dark" href="./grid.html" title="View Modules">Grid</a>
               </li>
               <li>
-                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                <button class="btn btn--link btn--link-dark" onClick="window.scrollTo(0, 0);">
                   Back To Top
                 </button>
               </li>
@@ -34,33 +34,34 @@
           </div>
         </nav>
       </header>
-      <p>This is a list of html elements written with semantic markup. Elements form the basis of <a href="/modules.html">modules</a>.</p>
+
+      <p>This is a list of html elements written with semantic markup. Elements form the basis of <a class="link" href="/modules.html">modules</a>.</p>
       <nav aria-labelledby="page-navigation" class="stack--small">
         <p id="page-navigation">Elements:</p>
         <ol class="v-list">
           <li>
-            <a href="#text">Text</a>
+            <a class="link" href="#text">Text</a>
           </li>
           <li>
-            <a href="#links">Links</a>
+            <a class="link" href="#links">Links</a>
           </li>
           <li>
-            <a href="#lists">Lists</a>
+            <a class="link" href="#lists">Lists</a>
           </li>
           <li>
-            <a href="#lists-blocks">Lists Of Block Elements</a>
+            <a class="link" href="#lists-blocks">Lists Of Block Elements</a>
           </li>
           <li>
-            <a href="#buttons">Buttons</a>
+            <a class="link" href="#buttons">Buttons</a>
           </li>
           <li>
-            <a href="#tables">Tables</a>
+            <a class="link" href="#tables">Tables</a>
           </li>
           <li>
-            <a href="#forms">Forms</a>
+            <a class="link" href="#forms">Forms</a>
           </li>
           <li>
-            <a href="#form-validations">Form Validations</a>
+            <a class="link" href="#form-validations">Form Validations</a>
           </li>
         </ol>
       </nav>
@@ -71,54 +72,78 @@
 
         <h3>Standard Text: </h3>
         <p>Standard text,</p>
+        <span class="text">also Standard</span>
         <code>
           &lt;p&gt;Standard text,&lt;/p&gt;<br/>
-          &lt;span class="txt"&gt;also Standard&lt;/span&gt;
+          &lt;span class="text"&gt;also Standard&lt;/span&gt;
         </code>
 
-        <h3>Small Text: </h3>
-        <p class="txt-small">Small,</p>
-        <small>Also small</small>
+        <h3>Small Sized Text: </h3>
+        <p class="text-small">Small</p>
         <code>
-          &lt;p class="txt-small"&gt;Small,&lt;/p&gt;<br/>
-          &lt;small&gt;Also Small&lt;/small&gt;
+          &lt;p class="text-small"&gt;Small&lt;/p&gt;<br/>
         </code>
 
-        <h3>Large Text: </h3>
-        <p class="txt-large">Lorem ipsum dolor sit amet</p>
-        <code>&lt;p class="txt-large"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
+        <h3>Large Size Text: </h3>
+        <p class="text-large">Lorem ipsum dolor sit amet</p>
+        <code>&lt;p class="text-large"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
 
         <h3>Centered Text: </h3>
-        <p class="txt-centered">Lorem ipsum dolor sit amet</p>
-        <code>&lt;p class="txt-centered"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
+        <p class="text-centered">Lorem ipsum dolor sit amet</p>
+        <code>&lt;p class="text-centered"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code>
 
-        <h3>Italic Text: </h3>
-        <p class="txt-centered">
-          <span class="txt-italic">Italic</span>, <em>Also Italic</em>
-        </p>
+        <h3>Semantically Important Text:</h3>
+        <p>HTML defines the strong tag, which "indicates that its contents have strong importance, seriousness, or urgency." It also has the em tag, which "marks text that has stress emphasis." In this theme you would need to add the "text-bold" or "text-italic" class to make items appear visually bolded or italicized. There is a minor quirk however, natively browsers style the strong tag as font-weight: "bold", and the em tag as font-style: "italic", so our reset undoes those tags stylings. This allows you to style the unstyled strong and em tags appropriately for the given context.</p>
+
+        <p><strong class="text-bold">Important text, bolded</strong><br/>
+        <strong>Important text, not bolded</strong></p>
         <code>
-          &lt;span class="txt-italic"&gt;Italic&lt;/span&gt;,<br/>
-          &lt;em&gt;Also Italic&lt;/em&gt;
+          &lt;strong class="text-bold"&gt;Important text, bolded&lt;/p&gt;<br/>
+          &lt;strong&gt;Important text, not bolded&lt;/strong&gt;
         </code>
 
-        <h3>Bold Text: </h3>
-        <p class="txt-centered">
-          <span class="txt-bold">Bold</span>, <strong>Also Bold</strong>
+        <p>
+          <em class="text-italic">Italic text, italicized</em>, <em>Not italicized</em>
         </p>
         <code>
-          &lt;span class="txt-bold"&gt;Italic&lt;/span&gt;,<br/>
-          &lt;strong&gt;Also Bold&lt;/strong&gt;
+          &lt;em class="text-italic"&gt;Italic text, italicized,&lt;/em&gt;,<br/>
+          &lt;em&gt;Not italicized&lt;/em&gt;
+        </code>
+
+        <h3>Semantically Unimportant Text:</h3>
+        <p>HTML defines the small tag, but a small tag semantically means unimportant or text, not small sized text. In this theme you would need to add the "text-small" class. There is a minor quirk however, natively browsers style the small tag as font-size: "smaller", so our reset restores that improper user agent styling to be normal sized.</p>
+
+        <p><small class="text-small">Small tag, small size</small><br/>
+        <small>Small tag, normal sized</small></p>
+        <code>
+          &lt;small class="text-small"&gt;Small tag, small size,&lt;/small&gt;<br/>
+          &lt;small&gt;Small tag, normal sized&lt;/small&gt;
         </code>
       </div>
 
       <div id="links" class="section">
         <h2>Links</h2>
-        <p>All apps use links, these are a tags. Your app should not only define styles for links, but also for the three pseudo classes of links: :hover, :focus, :active. Hover over <a href="#">this link</a> to see how it's styling changes: </p>
+        <p>All apps use links, these are a tags. Your app should not only define styles for links, but also for the three pseudo classes of links: :hover, :focus, :active. Hover over <a class="link" href="#">this link</a> to see how it's styling changes: </p>
 
-        <code>&lt;a href="#"&gt;Lorem ipsum dolor sit amet&lt;/a&gt;</code>
+        <code>&lt;a class="link" href="#"&gt;Lorem ipsum dolor sit amet&lt;/a&gt;</code>
 
         <p>Here's a link with the hover stlying pre-applied so you can see it:</p>
-        <a href="#" style="border-color:#000000;">Back to top link!</a>
+        <a class="link" href="#" style="border-color:#855959;">Back to top link!</a>
+
+        <h3>Wrapper Links:</h3>
+        <p>Recently, the HTML standard evolved to allow a tags to wrap any element as a link. In this theme, a tags that wrap block level elements can have a class of "block-link" applied to them. This turns the link into a block level element. This allows layouts to apply vertical margins to the wrapped element through the link. See this example below:</p>
+
+        <a href="#" class="block-link">
+          <div class="section">
+            <p>I'm a section wrapped in a link!</p>
+          </div>
+        </a>
+
+        <code>
+          &lt;a class="block-link" href="#"&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&lt;div class="section"&gt;...&lt;/div&gt;<br/>
+          &lt;/a&gt;
+        </code>
       </div>
 
       <div id="lists" class="section">
@@ -342,14 +367,14 @@
           <h3>Sign up for more Reasonably Good Content</h3>
           <div class="form__input">
             <input id="signup-form--name" type="text" name="name" />
-            <label class="txt-small" for="signup-form--name">Name</label>
+            <label class="text-small" for="signup-form--name">Name</label>
           </div>
           <div class="form__input">
             <input id="signup-form--email" type="email" name="email" required="true" />
-            <label class="txt-small" for="signup-form--email">Email<sup>*</sup></label>
+            <label class="text-small" for="signup-form--email">Email<sup>*</sup></label>
           </div>
           <div class="cluster cluster--right">
-            <label class="txt-small" for="signup-form--offers">Send me cool offers from friends of Reasonably Good	&trade;</label>
+            <label class="text-small" for="signup-form--offers">Send me cool offers from friends of Reasonably Good	&trade;</label>
             <div class="checkbox">
               <input id="signup-form--offers" class="checkbox" type="checkbox" name="offers" checked/>
               <label for="signup-form--offers"></label>
@@ -365,14 +390,11 @@
             <p><small><sup>*</sup>Psst! We'll never share your email with anyone.</small></p>
           </div>
         </form>
+
+        <h3>Form Validations</h3>
+        <p>Forms on the web can accept any input. Permissive inputs is a feature, not a bug about forms. It's best practice to validate both on the server and client side. This theme doesn't implement custom validations and instead relies on HTML5 form validations. They're robust enough to ensure data is formatted properly, and work out of the box natively.</p>
       </div>
 
-      <div id="form-validations" class="section">
-        <h2>Form Validations</h2>
-        <p>Form inputs in a browser accept any value a user can key or mouse in, meaning that there is a high likelihood a form's value will be invalid, incomprehensible or unusuable by you. It's prudent then to valid the input of a form before it can be submitted to your server for further processing (your server should run it's own set of validations as well).</p>
-
-
-      </div>
     </div>
     <script src="./theme/index.js"></script>
   </body>

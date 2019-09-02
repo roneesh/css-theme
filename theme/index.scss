@@ -1,32 +1,46 @@
-@import './elements/reset';
-@import './elements/variables';
-
 // alphabetical imports except variables and reset
 // any other organization required for imports would be an anti-pattern
-@import './elements/accessibility';
-@import './elements/buttons';
-@import './elements/forms';
-@import './elements/grid';
-@import './elements/global';
-@import './elements/layouts';
-@import './elements/links';
-@import './elements/lists';
-@import './elements/tables';
-@import './elements/text';
-@import './elements/z-index';
 
-@import './modules/alerts';
-@import './modules/footer';
-@import './modules/header';
-@import './modules/section';
-@import './modules/site-nav';
-@import './modules/sliders';
+// import in order of the ITCSS methodology:
 
-@import './applications/blog';
-@import './applications/card';
-@import './applications/grids';
-@import './applications/modal';
-@import './applications/ribbon';
+// 1. Settings - The broadest level of ITCSS, Pre-processor variables go here.
+@import './settings/variables';
+
+// 2. Tools - Mixins used across the CSS codebase go here.
+@import './tools/layout-mixins';
+
+// 3. Generic - The first place elements get styled. This section includes reset, CSS variables, and global styling.
+@import './generic/reset';
+@import './generic/global';
+@import './generic/variables';
+
+// 4. Base - The base elements are styled here.
+@import './base/buttons';
+@import './base/forms';
+@import './base/grid';
+@import './base/layouts';
+@import './base/links';
+@import './base/lists';
+@import './base/tables';
+@import './base/text';
+
+// 5. Objects -
+@import './objects/alerts';
+@import './objects/footer';
+@import './objects/header';
+@import './objects/section';
+@import './objects/site-nav';
+@import './objects/sliders';
+
+// 6. Components
+@import './components/blog';
+@import './components/card';
+@import './components/grids';
+@import './components/modal';
+@import './components/ribbon';
+
+@import './utilities/accessibility';
+@import './utilities/z-index';
 
 .markup-box {
   border: 1px dotted var(--color-dark);

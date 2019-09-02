@@ -17,16 +17,16 @@
           <div class="site-nav__menu">
             <ul class="v-list v-list--no-padding">
               <li>
-                <a class="dark-contrast" href="./index.html" title="View Elements">Elements</a>
+                <a class="link link--dark" href="./index.html" title="View Elements">Elements</a>
               </li>
               <li>
-                <a class="dark-contrast" href="./modules.html" title="View Modules">Modules</a>
+                <a class="link link--dark" href="./modules.html" title="View Modules">Modules</a>
               </li>
               <li>
-                <a class="dark-contrast" href="./grid.html" title="View Modules">Grid</a>
+                <a class="link link--dark" href="./grid.html" title="View Modules">Grid</a>
               </li>
               <li>
-                <button class="btn btn--link dark-contrast" onClick="window.scrollTo(0, 0);">
+                <button class="btn btn--link btn--link-dark" onClick="window.scrollTo(0, 0);">
                   Back To Top
                 </button>
               </li>
@@ -34,37 +34,37 @@
           </div>
         </nav>
       </header>
-      <p>This is a list of html modules written using semantic markup, BEM CSS, layouts and a sprinkle of JS. Modules build upon and utilize <a href="/index.html">elements</a>.</p>
+      <p>This is a list of html modules written using semantic markup, BEM CSS, layouts and a sprinkle of JS. Modules build upon and utilize <a class="link" href="/index.html">elements</a>.</p>
       <nav aria-labelledby="page-navigation">
         <p id="page-navigation">Modules:</p>
         <ol class="v-list">
           <li>
-            <a href="#section">Section</a>
+            <a class="link" href="#section">Section</a>
           </li>
           <li>
-            <a href="#header-and-footer">Header and Footer</a>
+            <a class="link" href="#header-and-footer">Header and Footer</a>
           </li>
           <li>
-            <a href="#sliders">Sliding Elements</a>
+            <a class="link" href="#sliders">Sliding Elements</a>
           </li>
           <li>
-            <a href="#alerts">Alerts</a>
+            <a class="link" href="#alerts">Alerts</a>
           </li>
           <li>
-            <a href="#site-navigation">Site Navigation</a>
+            <a class="link" href="#site-navigation">Site Navigation</a>
           </li>
           <li>
-            <a href="#blog-entry-index">Blog Entry on an Index Page</a>
+            <a class="link" href="#blog-entry-index">Blog Entry on an Index Page</a>
           </li>
           <li>
-            <a href="#modal">Modal</a>
+            <a class="link" href="#modal">Modal</a>
           </li>
         </ol>
       </nav>
 
       <div id="section" class="section">
         <h2>Sections</h2>
-        <p>You saw these in <a href="./index.html">elements</a>, so there's no need to go into detail. The section is a stylized block level container that we use predominantly in our designs.</p>
+        <p>You saw these in <a class="link" href="./index.html">elements</a>, so there's no need to go into detail. The section is a stylized block level container that we use predominantly in our designs.</p>
         <div class="section"><p>I am a section, I can hold any html/css content.</p></div>
         <code>
           &lt;div class="section"&gt;<br/>
@@ -124,31 +124,31 @@
         <h2>Alerts</h2>
         <p>Alerts are increasingly a part of web pages now that there are frequent AJAX calls that can fail or produce errors. A robust, global alert notification system is great for letting users know results of their actions, and what potential next steps that might take.</p>
         <p>Let's try it out, send a sample alert here:</p>
-        <form id="alert-test-form" class="stack form js-slider slide-right" data-slide-class="slide-in">
+        <form id="alert-test-form" class="stack form">
           <h3>Test the Global Alert System</h3>
           <div class="form__input">
             <input type="text" required="true" name="alertText" placeholder="This is a test of our automated alert broadcast system." />
-            <label class="txt-small">Alert text</label>
+            <label class="text-small">Alert text</label>
           </div>
           <div>
             <fieldset>
-              <legend class="txt-small">Choose an alert type</legend>
+              <legend class="text-small">Choose an alert type</legend>
               <ul class="v-list">
                 <li>
                   <input name="alertType" type="radio" value="primary" id="primary-alert">
-                  <label class="txt-small" for="primary-alert">Primary</label>
+                  <label class="text-small" for="primary-alert">Primary</label>
                 </li>
                 <li>
                   <input name="alertType" type="radio" value="danger" id="danger-alert">
-                  <label class="txt-small" for="danger-alert">Danger</label>
+                  <label class="text-small" for="danger-alert">Danger</label>
                 </li>
                 <li>
                   <input name="alertType" type="radio" value="success" id="success-alert">
-                  <label class="txt-small" for="success-alert">Success</label>
+                  <label class="text-small" for="success-alert">Success</label>
                 </li>
                 <li>
                   <input name="alertType" type="radio" value="info" id="info-alert">
-                  <label class="txt-small" for="info-alert">Info</label>
+                  <label class="text-small" for="info-alert">Info</label>
                 </li>
               </ul>
             </fieldset>
@@ -197,17 +197,17 @@
         </code>
       </div>
 
-      <div id="blog-entry-index" class="section">
+      <div id="blog-entry-index" class="section stack">
           <h2>A Blog Entry on an Index Page</h2>
           <p>A good releveant website will update content often, generally as part of a blog. Blogs have two core page experiences: index and detail. The index page lists recent blog posts, often in a stylized and attractive manner. This is our sample blog index entry.</p>
 
-          <a href="#" class="wrapper">
-            <div class="blog-index-entry">
-              <div class="cluster cluster--right">
+          <a class="block-link" href="#">
+            <div class="blog-index__post">
+              <div class="blog-index__post__date">
                 <p><time datetime="2020-01-01">Jan 1<sup>st</sup>, 2020</time></p>
               </div>
-              <h3>A discussion on reasonably good CSS.</h3>
-              <p>In this post, we'll do a deep dive into what it might mean for CSS to just be ok. You know? Not perfect, not terrbile, just reasonably good and well written.</p>
+              <h3 class="blog-index__post__title">A discussion on reasonably good CSS.</h3>
+              <p>In this post, we'll do a deep dive into what it might mean for CSS to just be ok. You know? Not perfect, not terrible, just reasonably good and well written.</p>
             </div>
           </a>
       </div>
