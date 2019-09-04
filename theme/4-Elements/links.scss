@@ -18,19 +18,19 @@ a {
 .link {
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.1s;
+  transition: border-color 0.1s, top 0.1s;
   color: var(--color-link);
 }
-
-// Martin says consider giving this a class name rather,
-// otherwise keep it as styling the a tag, and just know
-// you'll have to add new classes later.
 
 .link:hover,
 .link:focus,
 .link:active {
   outline: 0;
   border-color: var(--color-link);
+}
+.link:active {
+  position: relative;
+  top: 2px;
 }
 
 .link:visited {

@@ -1,4 +1,4 @@
-@import '../tools/layout-mixins';
+@import '../2-Tools/layout-mixins';
 
 ul, ol { list-style-position: inside; }
 ol { list-style-type: decimal; }
@@ -15,6 +15,9 @@ ol { list-style-type: decimal; }
 }
 .v-list--list-style-square {
   list-style-type: square;
+}
+.v-list--list-style-disc {
+  list-style-type: disc;
 }
 
 .h-list {

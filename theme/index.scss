@@ -1,39 +1,40 @@
 // import folders in order of the ITCSS methodology, and in each group of imports import files alphabetically. Any other form organization required for imports would be an anti-pattern.
 
 // 1. Settings - The broadest level of ITCSS, Pre-processor variables go here.
-@import './settings/variables';
+@import './1-Settings/variables';
 
 // 2. Tools - Mixins used across the CSS codebase go here.
-@import './tools/layout-mixins';
+@import './2-Tools/layout-mixins';
 
 // 3. Generic - The first place elements get styled. This section includes reset, CSS variables, and global styling.
-@import './generic/reset';
-@import './generic/global';
-@import './generic/variables';
+@import './3-Generic/reset';
+@import './3-Generic/global';
+@import './3-Generic/variables';
 
 // 4. Base - The base elements are styled here.
-@import './base/buttons';
-@import './base/forms';
-@import './base/links';
-@import './base/lists';
-@import './base/tables';
-@import './base/text';
+@import './4-Elements/buttons';
+@import './4-Elements/forms';
+@import './4-Elements/links';
+@import './4-Elements/lists';
+@import './4-Elements/tables';
+@import './4-Elements/text';
 
-// 5. Objects -
-@import './objects/layouts';
-@import './objects/sliders';
+// 5. Objects - These are styles for objects above base elements, (lists, etc), but not pieces of UI.
+@import './5-Objects/layouts';
+@import './5-Objects/sliders';
 
 // 6. Components - These are designed pieces of UI, like a blog, card, etc.
-@import './components/alerts';
-@import './components/blog';
-@import './components/card';
-@import './components/grids';
-@import './components/modal';
-@import './components/ribbon';
-@import './components/section';
-@import './components/site-nav';
+@import './6-Components/alerts';
+@import './6-Components/blog';
+@import './6-Components/card';
+@import './6-Components/credit-card-page';
+@import './6-Components/grids';
+@import './6-Components/modal';
+@import './6-Components/ribbon';
+@import './6-Components/section';
+@import './6-Components/site-nav';
 
 // 7. Utilities - These are high specificity utility classes. This group also contains the z-index file, which manages z-index for the entire theme. Z-index is best managed in one single file so z-indexes can be comprehended in one place.
-@import './utilities/accessibility';
-@import './utilities/theme-preview';
-@import './utilities/z-index';
+@import './7-Utilities/accessibility';
+@import './7-Utilities/theme-preview';
+@import './7-Utilities/z-index';
